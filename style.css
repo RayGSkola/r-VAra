@@ -1,0 +1,52 @@
+
+body {
+    max-width: 100%;
+    margin: 0%;
+    background-color: rgba(103, 102, 102, 0.642);
+}
+.Navigeringsfält {
+    background-color: rgba(0, 0, 0, 0.799);
+    width: 100%;
+    height: 55px;
+    margin: 0%;
+    box-shadow: 0px 5px rgb(80, 78, 78) ;
+    position: fixed;
+}
+#Title {
+    color: white;
+    font-weight: bold;
+    position: fixed;
+    max-width: fit-content;
+    font-size: 30px;
+    padding-left: 15px;
+    margin-top: -18px;
+}
+ul {
+    list-style-type: none;
+    margin: 4px;
+    padding: 2px;
+    position: sticky;
+    top: 0;
+}
+
+li {
+    border-right: 1px solid #bbb;
+    float: right;
+  }
+  
+  li:last-child {
+    border-right: none;
+  }
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+
+}
+
+li a:hover {
+    background-color: rgba(0, 0, 0, 0.548) ;
+}
