@@ -13,20 +13,19 @@ function carousel() {
   setTimeout(carousel, 2000); // Change image every 2 seconds
 }
 
-var slideIndex = 1;
-showDivs(slideIndex);
+let textSlideIndex = 1;
+showSlides(textSlideIndex);
 
-function plusDivs(n) {
-  showDivs(slideIndex += n);
+function plusSlides(n) {
+    showSlides(textSlideIndex += n);
 }
 
-function showDivs(n) {
-  var i;
-  var x = document.getElementsByClassName("MiniBilder");
-  if (n > x.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = x.length}
-  for (i = 0; i < x.length; i++) {
-    x[i].style.display = "none";  
-  }
-  x[slideIndex-1].style.display = "block";  
+function showSlides(n) {
+    const slides = document.getElementsByClassName("slide");
+    if (n > slides.length) {textSlideIndex = 1}    
+    if (n < 1) {textSlideIndex = slides.length}
+    for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+    }
+    slides[textSlideIndex-1].style.display = "flex";  
 }

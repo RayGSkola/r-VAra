@@ -96,8 +96,6 @@ li a:hover {
     position: relative;
     top: 60px;
     text-align: center;
-    /* clear: both;*/
-    /*box-sizing: border-box; */
 }
 
 .Bildspel_1 {
@@ -170,39 +168,61 @@ p {
 .MiniBild {
     height: 400px;
     width: 70%;
-    right: 0;
+    right: 2%;
     top: 15%;
     position: absolute;
 }
 
-.MiniBilder {
-    max-height: 100%;
-    max-width: 100%;
-    display: block;
+.slideshow-container {
+    position: relative;
+    max-width: 800px; /* Adjust max-width as needed */
+    margin: auto;
+    height: 500px;
+    align-content: center;
+    justify-content: center;
+  }
+  
+  .slides {
+    display: flex;
+    height: 300px;
+    
 }
 
-.cursor {
-    cursor: pointer;
-  }
-  
-.left, .right {
-    cursor: pointer;
-    position: absolute;
-    top: 40%;
-    width: auto;
-    padding: 16px;
-    color: rgb(0, 0, 0);
+.slide {
+    flex: 1;
+    display: none; /* hide all slides initially */
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0);
+    font-size: 50px;
+    text-shadow: 1px 1px #1c1c1c75;
     font-weight: bold;
-    font-size: 20px;
-    user-select: none;
-    -webkit-user-select: none;
-  }
-  
-.right {
-    right: 0;
-  }
-  
-.left:hover, .right:hover {
-    background-color: rgba(255, 255, 255, 0.8);
-  }
+    padding: 20px;
+}
 
+.slide:first-child {
+    display: flex; /* display the first slide */
+}
+
+.prev,
+.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    padding: 16px;
+    color: white;
+    background-color: black;
+    border: none;
+    z-index: 100;
+}
+
+.prev {
+    left: 0;
+}
+
+.next {
+    right: 0;
+}

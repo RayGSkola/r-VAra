@@ -39,17 +39,20 @@
 
     <div class="Tider">
         <h1>Tider</h1>
-        <div class="MiniBild">
-            <img class="MiniBilder" src="Bilder2\nom.jpg" style="width:100%">
-            <img class="MiniBilder" src="Bilder2\nomnom.jpg" style="width:100%">
-            <img class="MiniBilder" src="Bilder2\slurp.jpg" style="width:100%">
-            <img class="MiniBilder" src="Bilder2\yum yum.jpg" style="width:100%">
-            <img class="MiniBilder" src="Bilder2\yum.jpg" style="width:100%">
-            <button class="left" onclick="plusDivs(-1)">&#10094;</button>
-            <button class="right" onclick="plusDivs(+1)">&#10095;</button>
-        <div id="TidDatum"></div>
-        <div id="TidDag"></div>
-        <div id="VilkaTider"></div>
+        <div class="slideshow-container">
+            <div class="slides">
+              <div class="slide">Måndag, 2024-06-03 <br>
+                11:00 - 13:00</div>
+              <div class="slide">Torsdag, 2024-06-06 <br>
+                11:00 - 13:00</div>
+              <div class="slide">Slide 3</div>
+            </div>
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+          </div>
+        <div class="TidDatum"></div>
+        <div class="TidDag"></div>
+        <div class="VilkaTider"></div>
         </div>
     </div>
     <div id="BokaBord"></div>
