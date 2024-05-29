@@ -342,9 +342,11 @@ label {
 }
 
 table, th, td {
-    border:1px solid black;
+    border:8px solid green;
     margin-bottom: 20%;
     margin-top: 5%;
+    color:blue;
+    font-weight: bold;
 }
 
 @media (max-width: 768px) {
@@ -390,8 +392,10 @@ table, th, td {
         flex-direction: column; 
     }
     table, th, td {
-        border:1px solid black;
+        border:8px solid green;
         margin-bottom: 25%;
+        color:blue;
+        font-weight: bold;
     }
     
 }
