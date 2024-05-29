@@ -1,196 +1,165 @@
+/* Basic Reset */
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box; 
-    
+    box-sizing: border-box;
 }
 
-div {
-    margin-bottom: 10px;
-}
+/* Body Styles */
 body {
-    max-width: 100%;
-    margin: 0%;
-    background-color: rgba(19, 18, 18, 0.847);
+    font-family: 'BT Futura W01', Arial, sans-serif;
+    background-color: rgba(33, 32, 32, 0.884);
     overflow-x: hidden;
-    height: fit-content;
+    color: white;
 }
+
+/* Navigation Bar Styles */
 .Navigeringsfält {
     background-color: rgb(0, 0, 0);
     width: 100%;
-    height: 55px;
-    margin: 0%;
-    box-shadow: 0px 5px rgba(50, 50, 50, 0.756) ;
+    height: 60px;
     position: fixed;
-    font-family: 'BT Futura W01', Arial, sans-serif;
+    top: 0;
     z-index: 1000;
-    overflow: hidden;
-
-}
-
-.sticky {
-    height: 40px; /* New height */
-    padding-top: 10px; /* Adjusted padding */
-    padding-bottom: 10px; /* Adjusted padding */
-    background-color: black; /* Change the background color when sticky */ 
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 5%;
+    box-shadow: 0px 5px rgba(50, 50, 50, 0.756);
 }
 
 #Title {
-    color: white;
-    font-weight: bold;
-    position: absolute;
-    max-width: fit-content;
-    margin: 0;
     font-size: 40px;
-    padding-left: 15px;
-    font-family: 'BT Futura W01', Arial, sans-serif;
-    top: 50%;
-    left: 10%;
+    font-weight: bold;
+    color: white;
 }
 
 ul {
     list-style-type: none;
-    display: block;
-    margin-block-start: 1em;
-    margin-block-end: 1em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-    padding-inline-start: 40px;
-    margin-top: 4px;
-    margin-right: 5px;
-    top: 0;
-    font-size: 30px;
-    font-family: 'BT Futura W01', Arial, sans-serif;
+    display: flex;
+    align-items: center;
 }
 
-
 li {
-    border-left: 1px solid #bbb;
-    float: right;
-    letter-spacing: 0.6px;
-    height: inherit;
-  }
-  
-  li:last-child {
-    border-right: none;
-  }
+    margin-left: 20px;
+    position: relative;
+    margin-right: 20px;
+}
 
 li a {
     display: block;
+    padding: 10px 0;
+    font-size: 25px;
     color: white;
     text-align: center;
-    padding: 10px 16px;
     text-decoration: none;
+    position: relative;
+    transition: color 0.3s ease;
+}
 
+li a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background-color: white;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+li a:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
 }
 
 li a:hover {
-    background-color: rgba(0, 0, 0, 0.548) ;
-    border-bottom: 5px solid whitesmoke;
-    border-radius: 2px;
+    color: #efcb03;
 }
 
-.BästaResturang{
-    height: 250px;
-    width: 100%;
-    position: relative;
-    top: 60px;
+/* Section Styles */
+section {
+    padding: 100px 20px 50px 20px; /* Add padding to avoid overlap with fixed navbar */
     text-align: center;
 }
 
-.Bildspel_1 {
-    width: 100%;
-    height: 100%;
-    display: none;
+.BästaResturang {
+    height: auto; /* Set height to auto to fit content */
+    margin-top: 60px; /* Adjusted to avoid overlap with navbar */
+    text-align: center;
+    position: relative;
+    padding-bottom: 20px; /* Add some padding at the bottom */
 }
 
-
-h1 {
+.BästaResturang h1 {
     position: absolute;
-    top: 50%;
+    top: 35%;
     left: 50%;
     transform: translate(-50%, -50%);
     color: rgba(239, 203, 3, 0.888);
     background-color: rgba(0, 0, 0, 0.6);
     width: 100%;
-    padding-top: 12px;
-    padding-bottom: 12px;
-
+    padding: 12px 0;
 }
 
-.OmOss{
-    background: #000000;
-    padding-right: 20px;
-    position: relative;
-    min-height: 200px ;
-    top: 51px;
-    color: white;
+.OmOss {
+    background: #242323;
+    min-height: 20px;
     text-align: center;
-    text-wrap: wrap;
+    padding: 50px 20px;
     width: 100%;
-    overflow: hidden;
-    margin-bottom: 10px;
+    margin-top: 10px;
 }
 
-
-#Titel_1 {
+.OmOss h2 {
     font-size: 50px;
     font-weight: lighter;
-    top: 50%;
-    
 }
 
-p {
-    position: absolute; 
-    top: 50%; 
-    left: 50%; 
-    transform: translate(-50%, -50%); 
+.OmOss p {
+    margin-top: 20px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 25px;
 }
 
 .Tider {
-    height: 500px;
-    width: 100%;
-    background-color: white;
-    position: relative;
+    background-color: #1b1a1a;
+    color: white;
+    padding: 50px 20px;
+    text-align: center;
 }
 
 .Tider h1 {
-    color: black;
-    width: fit-content;
-    left: 10%;
-    top: 12%;
-    background-color: rgba(255, 255, 255, 0);
-    font-size: 50px;
+    font-size: 80px;
     text-shadow: 1px 1px #1c1c1c75;
-
-}
-
-.MiniBild {
-    height: 400px;
-    width: 70%;
-    right: 2%;
-    top: 15%;
-    position: absolute;
+    text-decoration: underline;
+    margin: 0; 
+    padding-top: 30px; 
 }
 
 .slideshow-container {
     position: relative;
-    max-width: 800px; /* Adjust max-width as needed */
-    margin: auto;
-    height: 500px;
-    align-content: center;
-    justify-content: center;
-  }
-  
-  .slides {
+    width: 100%; /* Make slideshow container full width */
+    max-width: 100%; /* Ensure it doesn't overflow */
+    margin: 20px auto;
     display: flex;
-    height: 300px;
-    
+    justify-content: center;
+    overflow: hidden; /* Hide overflow */
+}
+
+.slides {
+    display: flex;
+    width: 100%;
+    height: auto;
 }
 
 .slide {
     flex: 1;
-    display: none; /* hide all slides initially */
+    display: none;
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -202,19 +171,18 @@ p {
     padding: 20px;
 }
 
+
 .slide:first-child {
-    display: flex; /* display the first slide */
+    display: flex;
 }
 
-.prev,
-.next {
+.prev, .next {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
     cursor: pointer;
     padding: 16px;
-    color: white;
-    background-color: black;
+    color: rgb(255, 255, 255);
     border: none;
     z-index: 100;
 }
@@ -225,4 +193,137 @@ p {
 
 .next {
     right: 0;
+}
+
+.prev:hover, .next:hover {
+    color: white;
+    background-color: rgba(52, 51, 51, 0.379);
+}
+
+/* Specific Sections */
+.BokaBord {
+    background: #232323;
+    color: white;
+    padding: 50px 20px;
+    text-align: center;
+    height: fit-content;
+    position: relative;
+    margin-top: -15px;
+}
+
+.BokaBord h1 {
+    font-size: 70px;
+    margin-top: -10px;
+}
+
+.BokaBord p {
+    margin-top: 20px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 25px;
+}
+
+.uploadForm {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 10px;
+    padding: 20px;
+    align-items: center;
+}
+
+.uploadForm input[type="text"], .uploadForm textarea {
+    width: 100%; 
+    padding: 10px; 
+    margin: 5px 0; 
+    border-radius: 5px; 
+    border: 1px solid #ccc; 
+    box-sizing: border-box;
+}
+
+.uploadForm select {
+    width: 621px; 
+    padding: 10px; 
+    margin: 5px 0;
+    margin-left: -53.5%;
+    border-radius: 5px; 
+    border: 1px solid #ccc; 
+    box-sizing: border-box; 
+}
+
+.inputContainer {
+    margin: 10px;
+    width: 300px;
+}
+
+.inputContainer textarea[name="message"] {
+    height: 150px; 
+    width: 621px;
+    margin-left: -53.5%;
+}
+
+.uploadForm input[type="submit"] {
+    width: 120px;
+    height: 30px;
+    font-size: 20px;
+    border-color: white;
+    background-color:#333; ;
+    color: white;
+}
+
+.flexrow {
+    display: flex;
+    flex-direction: row;
+}
+
+label {
+    font-size: 25px;
+}
+
+.Bookinginfo a {
+    color: white;
+}
+
+.notification {
+    position: fixed;
+    top: 60px;
+    background-color: green;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    z-index: 9999; /* Ensure the notification is above other elements */
+}
+
+#Kontakt {
+    background: #222;
+    color: white;
+    width: 100%;
+    text-align: center;
+    height: 210px;
+    padding-top: 10px;
+}
+
+.Kontakt {
+    padding: 50px 20px;
+    align-items: stretch;
+    background: #222;
+    float: left;
+    left: 8%;
+    position: relative;
+    font-size: large;
+}
+
+.Kontakt1 {
+    padding: 60px 20px;
+    background: #222;
+    position: relative;
+    float: right;
+    right: 10%;
+    font-size: large;
+}
+
+table, th, td {
+    border:1px solid black;
+    margin-bottom: 20%;
 }

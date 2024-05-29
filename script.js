@@ -29,3 +29,33 @@ function showSlides(n) {
     }
     slides[textSlideIndex-1].style.display = "flex";  
 }
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    const form = document.querySelector('.uploadForm');
+    form.addEventListener('submit', function(event) {
+        event.preventDefault(); 
+
+        const email = form.querySelector('input[name="Email"]').value.trim();
+        const phoneNumber = form.querySelector('input[name="PhoneNumber"]').value.trim();
+
+        if (email === '' && phoneNumber === '') {
+            alert('Please provide either an email or a phone number.');
+            return; 
+        }
+
+        form.reset();
+
+        showNotification(); 
+    });
+
+    function showNotification() {
+        const notification = document.getElementById('notification');
+        notification.innerText = 'Hemsidan är en prototyp, så inget funkar';
+        notification.classList.add('notification');
+        setTimeout(() => {
+            notification.innerText = '';
+            notification.classList.remove('notification');
+        }, 2000);
+    }
+});

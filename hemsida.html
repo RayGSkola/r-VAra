@@ -4,60 +4,123 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <title>rÅVAra - Sveriges bästa restaurangskola</title>
 </head>
 <body>
-    <div class="Navigeringsfält">
-        <div id="Title">
-            <p>rÅVAra</p>
-        </div>
-
-        <ul>
-            <li><a href="default.asp">Kontakt</a></li>
-            <li><a href="news.asp">Boka</a></li>
-            <li><a href="contact.asp">Tider</a></li>
-            <li><a href="about.asp">Hem</a></li>
-          </ul>
-
-    </div>
-    <div class="BästaResturang">
-        <img class="Bildspel_1" src="Bilder1\Guac.png" alt="Guac">
-        <img class="Bildspel_1" src="Bilder1\marsipan.png" alt="marsipan">
-        <img class="Bildspel_1" src="Bilder1\Milkshake.png" alt="Milkshake">
-        <img class="Bildspel_1" src="Bilder1\Semlor.png" alt="Semlor">
-        <img class="Bildspel_1" src="Bilder1\Skärmbild 2024-05-08 104353.png" alt="Drink">
-        <img class="Bildspel_1" src="Bilder1\Skärmbild 2024-05-08 104823.png" alt="Burger">
-        <img class="Bildspel_1" src="Bilder1\Skärmbild 2024-05-08 105108.png" alt="Beef">
-  
-            <h1>Sveriges bästa resturangskola</h1>
-    </div>
-
-    <div class="OmOss">
-        <h2 id="Titel_1">Om oss</h2>
-        <p>Efter att restaurangskolan på Åva Gymnasium byggdes om 2017 så har eleverna med ett sinne för matlagning och smak arbetat hårt för att skapa den mest innovativa och kreativa matupplevesen som hedrar tidigare generationers rätter.</p>
-    </div>
-
-    <div class="Tider">
-        <h1>Tider</h1>
-        <div class="slideshow-container">
-            <div class="slides">
-              <div class="slide">Måndag, 2024-06-03 <br>
-                11:00 - 13:00</div>
-              <div class="slide">Torsdag, 2024-06-06 <br>
-                11:00 - 13:00</div>
-              <div class="slide">Slide 3</div>
+    <header>
+        <nav class="Navigeringsfält">
+            <div id="Title">
+                <p>rÅVAra</p>
             </div>
-            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-            <a class="next" onclick="plusSlides(1)">&#10095;</a>
-          </div>
-        <div class="TidDatum"></div>
-        <div class="TidDag"></div>
-        <div class="VilkaTider"></div>
-        </div>
-    </div>
-    <div id="BokaBord"></div>
-    <div id="Kontakt"></div>
+            <ul>
+                <li><a href="#BästaResturang">Hem</a></li>
+                <li><a href="#Tider">Tider</a></li>
+                <li><a href="#BokaBord">Boka</a></li>
+                <li><a href="#Kontakt">Kontakt</a></li>
+                <li><a href="Tidigare gäster.html">Gäster</a></li>
+            </ul>
+        </nav>
+        <div id="notification"></div>
+    </header>
 
+    <main>
+        <section class="BästaResturang" id="BästaResturang">
+            <div class="slideshow-container">
+                <img class="Bildspel_1" src="Bilder1/Guac.png" alt="Guac" loading="lazy">
+                <img class="Bildspel_1" src="Bilder1/marsipan.png" alt="marsipan" loading="lazy">
+                <img class="Bildspel_1" src="Bilder1/Milkshake.png" alt="Milkshake" loading="lazy">
+                <img class="Bildspel_1" src="Bilder1/Semlor.png" alt="Semlor" loading="lazy">
+                <img class="Bildspel_1" src="Bilder1/Skärmbild 2024-05-08 104353.png" alt="Drink" loading="lazy">
+                <img class="Bildspel_1" src="Bilder1/Skärmbild 2024-05-08 104823.png" alt="Burger" loading="lazy">
+                <img class="Bildspel_1" src="Bilder1/Skärmbild 2024-05-08 105108.png" alt="Beef" loading="lazy">
+            </div>
+            <h1>Sveriges bästa restaurangskola</h1>
+        </section>
+
+        <section class="OmOss">
+            <h2>Om oss</h2>
+            <p>Efter att restaurangskolan på Åva Gymnasium byggdes om 2017 så har eleverna med ett sinne för matlagning och smak arbetat hårt för att skapa den mest innovativa och kreativa matupplevelsen som hedrar tidigare generationers rätter.</p>
+        </section>
+
+        <section class="Tider" id="Tider">
+            <h2>Tider</h2>
+            <div class="slideshow-container">
+                <div class="slides">
+                    <div class="slide">Måndag, 2024-06-03 <br> 11:00 - 13:00</div>
+                    <div class="slide">Torsdag, 2024-06-06 <br> 11:00 - 13:00</div>
+                    <div class="slide">Tisdag, 2024-06-11 <br> 11:30 - 13:30</div>
+                </div>
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            </div>
+        </section>
+
+        <section class="BokaBord" id="BokaBord">
+            <h2>Boka Bord</h2>
+            <p>Du kan i allmänhet komma till en sittning inom 45 minuter från det angivna klockslaget (t.ex. mellan 11:00 och 11:45 för en sittning som börjar klockan 11:00). Vänligen ange i meddelanderutan när du avser komma.</p>
+            <form class="uploadForm" action="index.php" method="post">
+                <div class="flexrow">
+                    <div class="inputContainer">
+                        <label>Namn</label>
+                        <input type="text" name="name" placeholder="Ange ditt namn">
+                    </div>
+                    <div class="inputContainer">
+                        <label>Antal gäster</label>
+                        <input type="text" name="guestamount" placeholder="Antal gäster">
+                    </div>
+                </div>
+                <div class="flexrow">
+                    <div class="inputContainer">
+                        <label>E-post</label>
+                        <input type="text" name="Email" placeholder="Din e-postadress">
+                    </div>
+                    <div class="inputContainer">
+                        <label>Mobilnummer</label>
+                        <input type="text" name="PhoneNumber" placeholder="Ditt mobilnummer">
+                    </div>
+                </div>
+                <div class="flexrow">
+                    <div class="inputContainer">
+                        <label>Datum och Tid</label>
+                        <select name="DateAndTime">
+                            <option value="Monday-2024-06-03">Måndag, 2024-06-03, 11:00</option>
+                            <option value="Thursday-2024-06-06">Torsdag, 2024-06-06, 11:00</option>
+                            <option value="Tuesday-2024-06-11">Tisdag, 2024-06-11, 11:30</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="flexrow">
+                    <div class="inputContainer">
+                        <label>Meddelande</label>
+                        <textarea name="message" placeholder="Vänligen ange eventuella allergier."></textarea>
+                    </div>
+                </div>
+                <div class="inputContainer">
+                    <input type="submit" name="addBoking" id="addBoking" value="Boka">
+                </div>
+                <div class="BookingInfo">
+                    <p style="font-size: small;">
+                        Genom att fylla i formuläret godkänner du att vi sparar angivna uppgifter (så som namn, e-post, telefonnummer och allergier) för att kunna hantera förfrågan och eventuell genomförande av bokning. Uppgifterna sparas endast i syfte att hantera denna bokning, efter avslutat ärende raderas informationen.
+                    </p>
+                    <p style="font-size: small;">
+                        Information om hur Täby kommun behandlar personuppgifter och kontaktuppgift till Täby kommuns dataskyddsombud finns på 
+                        <a href="https://www.taby.se/personuppgifter" style="color: white;">taby.se/personuppgifter</a>.
+                    </p>
+                    <p>Jättekul att ni vill boka bord på rÅVAra! Om ni är fler än 8 personer som vill boka bord, eller har frågor kontakta oss på 
+                        <a href="mailto:info.ravara@taby.se" style="color: white">info.ravara@taby.se</a>. Välkomna!
+                    </p>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <footer id="Kontakt">
+        <h2>Kontakt</h2>
+        <address>
+            <p>rÅVAra <br> 08-55 55 81 01 <br> Åvaskolgränd 1-3, Täby</p> 
+            <p>Åva Gymnasium <br> <a href="https://instagram.com" target="_blank">Instagram</a></p>
+        </address>
+    </footer>
     <script src="script.js"></script>
 </body>
 </html>
