@@ -10,7 +10,7 @@ function carousel() {
   myIndex++;
   if (myIndex > x.length) {myIndex = 1}    
   x[myIndex-1].style.display = "block";  
-  setTimeout(carousel, 2000); // Change image every 2 seconds
+  setTimeout(carousel, 2000); 
 }
 
 let textSlideIndex = 1;
@@ -57,5 +57,25 @@ document.addEventListener('DOMContentLoaded', function() {
             notification.innerText = '';
             notification.classList.remove('notification');
         }, 2000);
+    }
+});
+
+
+document.addEventListener("DOMContentLoaded", function() {
+    const menuToggle = document.querySelector(".menu-toggle");
+    const navLinks = document.querySelector(".nav-links");
+
+    if (menuToggle && navLinks) {
+        menuToggle.addEventListener("click", function() {
+            navLinks.classList.toggle("active");
+        });
+
+        navLinks.querySelectorAll("a").forEach(function(link) {
+            link.addEventListener("click", function() {
+                navLinks.classList.remove("active");
+            });
+        });
+    } else {
+        console.error("menuToggle or navLinks element not found.");
     }
 });

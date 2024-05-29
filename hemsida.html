@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+
     <title>rÅVAra - Sveriges bästa restaurangskola</title>
 </head>
 <body>
@@ -12,12 +14,13 @@
             <div id="Title">
                 <p>rÅVAra</p>
             </div>
-            <ul>
+        <button class="menu-toggle">☰</button>
+            <ul class="nav-links">
                 <li><a href="#BästaResturang">Hem</a></li>
                 <li><a href="#Tider">Tider</a></li>
                 <li><a href="#BokaBord">Boka</a></li>
                 <li><a href="#Kontakt">Kontakt</a></li>
-                <li><a href="Tidigare gäster.html">Gäster</a></li>
+                <li><a href="Tidigare-gäster.html">Gäster</a></li>
             </ul>
         </nav>
         <div id="notification"></div>
@@ -30,9 +33,9 @@
                 <img class="Bildspel_1" src="Bilder1/marsipan.png" alt="marsipan" loading="lazy">
                 <img class="Bildspel_1" src="Bilder1/Milkshake.png" alt="Milkshake" loading="lazy">
                 <img class="Bildspel_1" src="Bilder1/Semlor.png" alt="Semlor" loading="lazy">
-                <img class="Bildspel_1" src="Bilder1/Skärmbild 2024-05-08 104353.png" alt="Drink" loading="lazy">
-                <img class="Bildspel_1" src="Bilder1/Skärmbild 2024-05-08 104823.png" alt="Burger" loading="lazy">
-                <img class="Bildspel_1" src="Bilder1/Skärmbild 2024-05-08 105108.png" alt="Beef" loading="lazy">
+                <img class="Bildspel_1" src="Bilder1/Drink.png" alt="Drink" loading="lazy">
+                <img class="Bildspel_1" src="Bilder1/Burger.png" alt="Burger" loading="lazy">
+                <img class="Bildspel_1" src="Bilder1/Beef.png" alt="Beef" loading="lazy">
             </div>
             <h1>Sveriges bästa restaurangskola</h1>
         </section>
@@ -114,11 +117,13 @@
         </section>
     </main>
 
-    <footer id="Kontakt">
+    <footer class="Kontakt" id="Kontakt">
         <h2>Kontakt</h2>
         <address>
-            <p>rÅVAra <br> 08-55 55 81 01 <br> Åvaskolgränd 1-3, Täby</p> 
-            <p>Åva Gymnasium <br> <a href="https://instagram.com" target="_blank">Instagram</a></p>
+            <div class="Kontakt1">
+                <span>rÅVAra <br> 08-55 55 81 01 <br> Åvaskolgränd 1-3, Täby</span> 
+              </div>
+              <div class="Kontakt2"><span>Åva Gymnasium <br> Instagram</span></div>
         </address>
     </footer>
     <script src="script.js"></script>
